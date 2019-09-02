@@ -1,0 +1,25 @@
+.header-container{ width: 1080px; margin: 0 auto; height: inherit; }
+.container{ width: 900px; margin: 0 auto; height: inherit; }
+
+nav{ background-color: #F2C299; }
+ul.nav{ float:right; }
+.nav{ text-align: right; margin-top: 11px; }
+.navbar-brand { display: inline-block; font-size: 16px; margin: 8px 0 8px 0; }
+.nav-item{ display: inline-block; }
+.nav-link{ padding: 5px; }
+.nav-link:visited{ color:black; }
+.nav-link:hover{ text-decoration: none; }
+
+.head-tit{ font-size: 48px; }
+.head-tit-mean{ font-size: 22px; }
+.head-section{ font-size: 15px; margin-top: 20px; }
+
+#tit-container{ margin-top: 100px; }
+#hero-area{ display: inline-block; }
+#log-box{ width: 340px; height: 240px; border: 1px solid black; border-radius: 5px; }
+#log-in{ float:right; }
+#log{ margin: 0 auto; width:285px; }
+
+.log-textbox{ height: 40px; width: 280px; margin-top: 10px; }
+.sign-btn{ height: 40px; width: 285px; margin-top: 4px; }
+#sign-in{ background-color: #33cc33; border: none; margin-top: 35px; }
