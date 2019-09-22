@@ -10,9 +10,10 @@
 
         <!-- 웹 폰트 -->
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-        <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
     </head>
     <body>
@@ -23,8 +24,8 @@
                 <div class="header-container">
                     <a href="index.html" class="navbar-brand">해우소</a>
                     <ul class="nav">
-                        <li class="nav-item"><a class="nav-link" href="#">메인 화면</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">해우소 소개</a></li>
+                        <li class="nav-item"><a class="nav-link top" href="#">메인 화면</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#hauso-info">해우소 소개</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">해우소</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">마이 페이지</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">로그아웃</a></li>
@@ -61,10 +62,70 @@
                         </div>
                     </div>
                     <!-- log-in end -->
+                
                 </div>
                 <!-- tit-container end -->
             </div>
         </header>
         <!-- header end -->
+        <div class="container">
+            <section id="hauso-info">
+                    <h4 id="info">해우소 소개</h4>
+                    <p>
+                        해우소 소개입니다. 해우소 소개입니다. 해우소 소개입니다. 해우소 소개입니다.<br>
+                        해우소 소개입니다. 해우소 소개입니다. 해우소 소개입니다. 해우소 소개입니다.<br>
+                        해우소 소개입니다. 해우소 소개입니다. 해우소 소개입니다. 해우소 소개입니다.
+                    </p>
+                    <div class="info-menu-area">
+                        <div class="info-menu menu1 bold"><a href="#menu1-tit">걱정 인형에게 털어놓기</a></div>
+                        <div class="info-menu menu2 bold"><a href="#menu2-tit">고민에 대한 대답 듣기</a></div>
+                    </div>
+                    <div class="menu1-area">
+                        <h4 class="menu1-tit" id="menu1-tit">걱정 인형에게 털어놓기</h4>
+                        걱정 인형에게 털어놓기 소개입니다. 걱정 인형에게 털어놓기 소개입니다.<br>
+                        걱정 인형에게 털어놓기 소개입니다. 걱정 인형에게 털어놓기 소개입니다.<br>
+                        걱정 인형에게 털어놓기 소개입니다. 걱정 인형에게 털어놓기 소개입니다.<br>
+                        걱정 인형에게 털어놓기 소개입니다. 걱정 인형에게 털어놓기 소개입니다.
+                    </div>
+                    <div class="menu2-area">
+                        <h4 class="menu2-tit" id="menu2-tit">고민에 대한 대답 듣기</h4>
+                        고민에 대한 대답듣기 소개입니다. 고민에 대한 대답듣기 소개입니다.<br>
+                        고민에 대한 대답듣기 소개입니다. 고민에 대한 대답듣기 소개입니다.<br>
+                        고민에 대한 대답듣기 소개입니다. 고민에 대한 대답듣기 소개입니다.<br>
+                        고민에 대한 대답듣기 소개입니다. 고민에 대한 대답듣기 소개입니다.<br>
+                    </div>
+            </section>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <h2 class="ir_pm">footer</h2>
+                <div class="footer">
+                    <address>Copyright © 2019 All Right Reserved</address>
+                </div>
+            </div>
+        </div>
+        
+    
+        <script>
+            $('.nav .top').click(function(e){
+                e.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: 0
+                },1100);
+            });
+
+            $('.nav a').click(function(e) {
+                var goTo = $(this).attr('href'); // selects element that was clicked
+                $("html, body").animate({scrollTop:$(goTo).offset().top-50}, 1100);
+                e.preventDefault();
+            });
+
+            $('.info-menu a').click(function(e) {
+                var goTo = $(this).attr('href'); // selects element that was clicked
+                $("html, body").animate({scrollTop:$(goTo).offset().top-50}, 1100);
+                e.preventDefault();
+            });
+
+        </script>
     </body>
 </html>

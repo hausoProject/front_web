@@ -1,10 +1,10 @@
 .header-container{ width: 1080px; margin: 0 auto; height: inherit; }
 .container{ width: 900px; margin: 0 auto; height: inherit; }
 
-nav{ background-color: #F2C299; }
+nav{ background-color: #F2C299; top: 0; width: 100%; position: fixed; }
 ul.nav{ float:right; }
 .nav{ text-align: right; margin-top: 11px; }
-.navbar-brand { display: inline-block; font-size: 16px; margin: 8px 0 8px 0; }
+.navbar-brand { display: inline-block; font-size: 14px; margin: 10px 0 10px 0; }
 .nav-item{ display: inline-block; }
 .nav-link{ padding: 5px; }
 .nav-link:visited{ color:black; }
@@ -14,7 +14,7 @@ ul.nav{ float:right; }
 .head-tit-mean{ font-size: 22px; }
 .head-section{ font-size: 15px; margin-top: 20px; }
 
-#tit-container{ margin-top: 100px; }
+#tit-container{ margin-top: 100px; height: 400px; }
 #hero-area{ display: inline-block; }
 #log-box{ width: 340px; height: 240px; border: 1px solid black; border-radius: 5px; }
 #log-in{ float:right; }
@@ -23,3 +23,19 @@ ul.nav{ float:right; }
 .log-textbox{ height: 40px; width: 280px; margin-top: 10px; }
 .sign-btn{ height: 40px; width: 285px; margin-top: 4px; }
 #sign-in{ background-color: #33cc33; border: none; margin-top: 35px; }
+
+#hauso-info{ text-align: center; font-size: 15px; }
+#hauso-info h4{ font-size: 48px; }
+#hauso-info p{ margin: 5px 0 10px 0; }
+#hauso-info div{ display: inline-block; }
+#hauso-info a:hover{ color: #F2A88C; }
+.info-menu{ font-size: 30px; margin-top: 50px; }
+.menu1{ margin-right: 100px; }
+
+.info-menu-area{ width: 100%; }
+.menu1-area{ text-align: center; margin-top: 50px; }
+.menu2-area{ margin-top: 50px; }
+
+#footer{ border-top: 1px solid #ccc; margin-top: 20px; }
+.footer{ padding: 30px; text-align: center; }
+.footer address{ font-style: normal; }
