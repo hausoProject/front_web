@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>해우소 - 회원가입</title>
+        <style>
+            .error-email{ color: red; font-size: 11px; margin-top: 5px; }
+        </style>
+    </head>
+    <body>
+        <form method="POST" action="sign-up.php">
+            아이디<br>
+            <input type="text" placeholder="id"/><br>
+            비밀번호<br>
+            <input type="password" placeholder="password"/><br>
+            비밀번호 재확인<br>
+            <input type="password" placeholder="password-check"/><br><br>
+            이름<br>
+            <input type="text" placeholder="name"/><br>
+            닉네임<br>
+            <input type="text" placeholder="nickname"/><br>
+            이메일<br>
+            <input type="text" placeholder="e-mail"/>&nbsp;@&nbsp;<input type="text" id="email"/>
+            <select name="email-choose" onchange="slt(this.value)" style="vertical-align: middle">
+                <option value="선택하세요" selected>선택하세요</option>
+                <option value="naver.com">naver.com</option>
+                <option value="daum.net">daum.net</option>
+                <option value="gmail.com">gmail.com</option>
+                <option value="">직접 입력</option>
+            </select><br>
+            <span class="error-email" id="error-email" style="display: none">이메일을 입력해주세요</span><br>
+            <input type="submit" value="가입하기">
+        </form>
+        
+        <script>
+            function slt(chObj){
+                if(chObj == "선택하세요"){
+                    document.getElementById("error-email").style.display = "block";
+                    document.getElementById("email").value = "";
+                }
+                else{
+                    document.getElementById("error-email").style.display = "none";
+                    document.getElementById("email").value = chObj;
+                }
+            }
+        </script>
+    </body>
+</html>

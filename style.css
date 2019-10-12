@@ -14,7 +14,7 @@ ul.nav{ float:right; }
 .head-tit-mean{ font-size: 22px; }
 .head-section{ font-size: 15px; margin-top: 20px; }
 
-#tit-container{ margin-top: 150px; height: 600px; }
+#tit-container{ margin-top: 100px; height: 400px; }
 #hero-area{ display: inline-block; }
 #log-box{ width: 340px; height: 240px; border: 1px solid black; border-radius: 5px; }
 #log-in{ float:right; }
@@ -39,24 +39,3 @@ ul.nav{ float:right; }
 #footer{ border-top: 1px solid #ccc; margin-top: 20px; }
 .footer{ padding: 30px; text-align: center; }
 .footer address{ font-style: normal; }
-
-body, html {
-    height: 100%;
-}
-
-.parallax {
-    /* The image used */
-    background-image: url('../img/main6.jpg');
-  
-    /* Full height */
-    height: 100%; 
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.main-tit{ text-align: center; font-size: 65px; color: #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); letter-spacing: 20px; }
-.main-tit div{ font-size: 20px; letter-spacing: 10px; }

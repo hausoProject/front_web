@@ -12,12 +12,11 @@ body, input, textarea, select, button, table{
     font-family: 'Noto Sans KR', sans-serif; color:#222; font-size:12px; line-height: 1.5;
 }
 
-/* 폰트 굵기 설정 */
 .thin       { font-weight: 100 }
 .light      { font-weight: 300 }
 .demilight  { font-weight: 400 }
 .regular    { font-weight: 500 }
-.bold       { font-weight: 600 }
+.bold       { font-weight: 700 }
 .black      { font-weight: 900 }
 
 /* IR 기법 */
