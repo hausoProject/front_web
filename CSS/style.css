@@ -1,16 +1,26 @@
-.header-container{ width: 1080px; margin: 0 auto; height: inherit; }
+.header-container{ width: 900px; margin: 0 auto; height: inherit; }
 .container{ width: 900px; margin: 0 auto; height: inherit; }
 
-nav{ background-color: #F2C299; top: 0; width: 100%; position: fixed; }
+/*
+color : #F2C299;
+logo-color : #ED8B43;
+
+color1 : #F7E5DA;
+color1 chg : #EDD0C0;
+color2 : #ED8B43;
+color3 : #442714;
+*/
+
+nav{ background-color: #EDD0C0; top: 0; width: 100%; position: fixed; }
 ul.nav{ float:right; }
 .nav{ text-align: right; margin-top: 16px; }
-.nav a { font-size: 14px; }
-.navbar-brand { display: inline-block; font-size: 14px; margin: 10px 0 10px 0; vertical-align: middle; }
+.nav li a{ font-size: 14px; color: #222; }
+.navbar-brand { display: inline-block; font-size: 14px; margin: 10px 0 10px 0; }
 .navbar-brand img { height: 30px; }
 .nav-item{ display: inline-block; }
-.nav-link{ padding: 5px; vertical-align: middle; }
-.nav-link:visited{ color:black; }
-.nav-link:hover{ text-decoration: none; }
+.nav-link{ padding: 5px 12px; vertical-align: middle; }
+.nav-link:visited{ color:#222; }
+.nav-link:hover{ color: #ED8B43; text-decoration: none; }
 
 .head-tit{ font-size: 48px; }
 .head-tit-mean{ font-size: 22px; }
@@ -21,6 +31,8 @@ ul.nav{ float:right; }
 #log-box{ width: 340px; height: 240px; border: 1px solid black; border-radius: 5px; }
 #log-in{ float:right; }
 #log{ margin: 0 auto; width:285px; }
+
+.hello { display: inline-block; padding: 0 0 0 200px; }
 
 .log-textbox{ height: 40px; width: 280px; margin-top: 10px; }
 .sign-btn{ height: 40px; width: 285px; margin-top: 4px; }

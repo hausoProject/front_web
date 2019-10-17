@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
         <title>해우소 - 회원가입</title>
-
         <meta charset="utf-8">
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="img/favicon.ico">
 
         <!-- CSS style -->
         <link rel="stylesheet" href="CSS/reset.css">
@@ -18,6 +19,8 @@
 
         <style>
             #content{ width: 900px; margin: 0 auto; height: inherit; }
+
+            .signUpForm { margin-top: 100px; }
             .error-email { color: red; font-size: 11px; margin-top: 5px; }
             .error { color: red; font-size: 11px; margin-top: 5px; }
             .idspan { color: red; font-size: 11px; margin-top: 5px; }
@@ -63,7 +66,7 @@
     </head>
     <body>
         <div id="content">
-            <form name="signUpForm" method="POST" action="sign-up.php">
+            <form name="signUpForm" class="signUpForm" method="POST" action="sign-up.php">
                 <table class="sign-up">
                     <tbody>
                         <tr>
