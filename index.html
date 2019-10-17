@@ -28,7 +28,7 @@
                     <a href="index.html" class="navbar-brand"><img src="img/main-logo.png"></a>
                     <ul class="nav">
                         <!--<li class="nav-item"><a class="nav-link top" href="#">메인 화면</a></li>-->
-                        <li class="nav-item"><a class="nav-link" href="#hauso-info">해우소 소개</a></li>
+                        <li class="nav-item"><a class="nav-link" href="hauso-info.html">해우소 소개</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">해우소</a></li>
                         <li class="nav-item"><a class="nav-link" href="sign-in.html">로그인</a></li>
                         <li class="nav-item"><a class="nav-link" href="sign-up.html">회원가입</a></li>
@@ -88,13 +88,13 @@
             });
 
             $('.nav a').click(function(e) {
-                var goTo = $(this).attr('href'); // selects element that was clicked
+                var goTo = $(this).attr('href');
                 $("html, body").animate({scrollTop:$(goTo).offset().top-50}, 1100);
                 e.preventDefault();
             });
 
             $('.info-menu a').click(function(e) {
-                var goTo = $(this).attr('href'); // selects element that was clicked
+                var goTo = $(this).attr('href');
                 $("html, body").animate({scrollTop:$(goTo).offset().top-50}, 1100);
                 e.preventDefault();
             });

@@ -13,7 +13,7 @@
     $result = mysqli_query($conn, $query);
 
     if($result)
-        echo "1";
+        echo "<script> location.href = 'welcome.html' </script>";
     else
         echo "-1";
 
