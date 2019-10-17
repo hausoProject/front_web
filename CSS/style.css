@@ -3,10 +3,12 @@
 
 nav{ background-color: #F2C299; top: 0; width: 100%; position: fixed; }
 ul.nav{ float:right; }
-.nav{ text-align: right; margin-top: 11px; }
-.navbar-brand { display: inline-block; font-size: 14px; margin: 10px 0 10px 0; }
+.nav{ text-align: right; margin-top: 16px; }
+.nav a { font-size: 14px; }
+.navbar-brand { display: inline-block; font-size: 14px; margin: 10px 0 10px 0; vertical-align: middle; }
+.navbar-brand img { height: 30px; }
 .nav-item{ display: inline-block; }
-.nav-link{ padding: 5px; }
+.nav-link{ padding: 5px; vertical-align: middle; }
 .nav-link:visited{ color:black; }
 .nav-link:hover{ text-decoration: none; }
 

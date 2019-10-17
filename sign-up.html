@@ -1,47 +1,226 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>해우소 - 회원가입</title>
+
+        <meta charset="utf-8">
+
+        <!-- CSS style -->
+        <link rel="stylesheet" href="CSS/reset.css">
+
+        <!-- 웹 폰트 -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
         <style>
-            .error-email{ color: red; font-size: 11px; margin-top: 5px; }
+            #content{ width: 900px; margin: 0 auto; height: inherit; }
+            .error-email { color: red; font-size: 11px; margin-top: 5px; }
+            .error { color: red; font-size: 11px; margin-top: 5px; }
+            .idspan { color: red; font-size: 11px; margin-top: 5px; }
+            .pswdspan { color: red; font-size: 11px; margin-top: 5px; }
+            .pswdchkspan { color: red; font-size: 11px; margin-top: 5px; }
+
+            .sign-up { text-align: left; }
+            table { border-collapse: collapse; border-top: 3px solid #333; border-bottom: 3px solid #333; width: 100%; }
+            table input {
+                height: 45px;
+                padding: 10px 19px;
+                box-sizing: border-box;
+                border-radius: 5px;
+                border: 1px solid #ddd;
+                background: #fafafa;
+            }
+            table tbody tr th { padding: 18px 20px; border-right: 1px solid #ddd; width: 20%; }
+            table tbody tr { border-bottom: 1px solid #ddd; }
+            table tbody tr td { padding: 10px 20px; }
+            table tbody tr td .btn {
+                display: inline-block;
+                line-height: 45px;
+                width: 100px;
+                background: #F2C299;
+                border-radius: 5px;
+                color: black;
+                text-align: center;
+            }
+            .btn {
+                margin: 0 auto;
+                display: inline-block;
+                line-height: 45px;
+                width: 140px;
+                background: #F2C299;
+                border-radius: 5px;
+                color: black;
+                text-align: center;
+            }
+            .join-btn { margin: 50px auto; }
+            .t_c{ text-align: center; }
+            a:link, a:visited { text-decoration: none; }
         </style>
     </head>
     <body>
-        <form method="POST" action="sign-up.php">
-            아이디<br>
-            <input type="text" placeholder="id"/><br>
-            비밀번호<br>
-            <input type="password" placeholder="password"/><br>
-            비밀번호 재확인<br>
-            <input type="password" placeholder="password-check"/><br><br>
-            이름<br>
-            <input type="text" placeholder="name"/><br>
-            닉네임<br>
-            <input type="text" placeholder="nickname"/><br>
-            이메일<br>
-            <input type="text" placeholder="e-mail"/>&nbsp;@&nbsp;<input type="text" id="email"/>
-            <select name="email-choose" onchange="slt(this.value)" style="vertical-align: middle">
-                <option value="선택하세요" selected>선택하세요</option>
-                <option value="naver.com">naver.com</option>
-                <option value="daum.net">daum.net</option>
-                <option value="gmail.com">gmail.com</option>
-                <option value="">직접 입력</option>
-            </select><br>
-            <span class="error-email" id="error-email" style="display: none">이메일을 입력해주세요</span><br>
-            <input type="submit" value="가입하기">
+        <div id="content">
+            <form name="signUpForm" method="POST" action="sign-up.php">
+                <table class="sign-up">
+                    <tbody>
+                        <tr>
+                            <th>
+                                <label for="username">아이디</label>
+                            </th>
+                            <td>
+                                <div class="id-box">
+                                    <input type="text" placeholder="id" class="username" name="username" id="username"/>
+                                    <a href="#" class="btn">중복확인</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="password">비밀번호</label> 
+                            </th>
+                            <td>
+                                <div class="pw-box">
+                                    <input type="password" placeholder="password" class="password" name="password" id="password"/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="password-check"">비밀번호 확인</label>
+                            </th>
+                            <td>
+                                <div class="pw_chk-box">
+                                    <input type="password" placeholder="password-check" class="password-check" name="password-check" id="password-check"/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="name">이름</label>
+                            </th>
+                            <td>
+                                <input type="text" placeholder="name" name="name" id="name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="nick">닉네임</label>
+                            </th>
+                            <td>
+                                <input type="text" placeholder="nickname" name="nick" id="nick"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="">이메일</label>
+                            </th>
+                            <td>
+                                <input type="text" placeholder="e-mail" name="email"/>&nbsp;@&nbsp;<input type="text" id="email"/>
+                                <select name="email-choose" onchange="choose(this.value)" style="vertical-align: middle">
+                                    <option value="선택하세요" selected>선택하세요</option>
+                                    <option value="naver.com">naver.com</option>
+                                    <option value="daum.net">daum.net</option>
+                                    <option value="gmail.com">gmail.com</option>
+                                    <option value="">직접 입력</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="join-btn t_c">
+                    <a href="#" class="btn">가입하기</a>
+                </div>
+            </div>
         </form>
         
         <script>
-            function slt(chObj){
-                if(chObj == "선택하세요"){
+            function choose(chObj) {
+                if(chObj == "선택하세요") {
                     document.getElementById("error-email").style.display = "block";
                     document.getElementById("email").value = "";
                 }
-                else{
+                else {
                     document.getElementById("error-email").style.display = "none";
                     document.getElementById("email").value = chObj;
                 }
             }
+
+            function check() {
+                var data = document.signUpForm;
+                if(data.username.value.lenght < 6) {
+                    document.getElementById("idMsg").style.display = "block";
+                }
+                else {
+                    document.getElementById("idMsg").style.display = "none";
+                }
+            }
+
+            $(document).ready(function() {
+                var chkeng = /[a-z]/;   // 영문 체크 정규식
+                var chknum = /[0-9]/;   // 숫자 체크 정규식
+                var chkkor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/; // 한글 체크 정규식
+
+                $(".username").keyup(function() {   // 아아디 입력이 될 때마다
+                    $(".idspan").text("");
+                    var idresult = $(this).val();
+                    var idresulteng = chkeng.test(idresult);    // 영문이 있는지 체크
+                    var idresultnum = chknum.test(idresult);    // 숫자가 있는지 체크
+                    var idresultkor = chkkor.test(idresult);    // 한글이 있는지 체크
+
+                    if(idresult.length < 5) {
+                        $(".idspan").text("5~20자의 영문, 숫자가 포함된 아이디를 입력해주세요.");
+                    } else if(idresult.length > 20) {
+                        $(".idspan").text("5~20자의 영문, 숫자가 포함된 아이디를 입력해주세요.");
+                    } else if(idresultkor != false) {
+                        $(".idspan").text("한글이 포함된 아이디를 사용할 수 없습니다.");
+                    } else if(idresulteng != true) {
+                        $(".idspan").text("숫자와 영문이 모두 포함된 아이디를 입력해주세요.");
+                    } else if(idresultnum != true) {
+                        $(".idspan").text("숫자와 영문이 모두 포함된 아이디를 입력해주세요.");
+                    } else {
+                        $(".idspan").text("사용할 수 있는 아이디입니다!");
+                    }
+                })
+
+                $(".password").keyup(function() {   // 비밀번호 입력이 될 때마다
+                    $(".pswdspan").text("");
+                    var pwresult = $(this).val();
+                    var pwresulteng = chkeng.test(pwresult);    // 영문 체크
+                    var pwresultnum = chknum.test(pwresult);    // 숫자 체크
+                    var pwresultkor = chkkor.test(pwresult);    // 한글 체크
+
+                    if(pwresult.length < 8) {
+                        $(".pswdspan").text("8~16자 영문, 숫자를 사용하세요.");
+                    } else if(pwresult.length > 16) {
+                        $(".pswdspan").text("8~16자 영문, 숫자를 사용하세요.");
+                    } else if(pwresultkor != false) {
+                        $(".pswdspan").text("한글이 포함된 비밀번호를 사용할 수 없습니다.");
+                    } else if(pwresulteng != true) {
+                        $(".pswdspan").text("숫자와 영문이 모두 포함된 비밀번호를 입력해주세요.");
+                    } else if(pwresultnum != true) {
+                        $(".pswdspan").text("숫자와 영문이 모두 포함된 비밀번호를 입력해주세요.");
+                    } else {
+                        $(".pswdspan").text("사용할 수 있는 비밀번호입니다!");
+                    }
+                })
+
+                $(".password-check").keyup(function() {
+                    $(".pswdchkspan").text("");
+                    var passresult = $(".pswdspan").val();
+                    var checkpass = $(this).val();
+                    
+                    if(passresult.value == "") {
+                        $(".pswdspan").text("비밀번호를 먼저 입력해주세요.");
+                    } else if(passresult == checkpass) {
+                        $(".pswdchkspan").text("비밀번호가 일치합니다!");
+                    } else {
+                        $(".pswdchkspan").text("비밀번호가 일치하지 않습니다. 다시 확인해주세요.");
+                    } 
+                })
+            })
         </script>
     </body>
 </html>
